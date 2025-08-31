@@ -35,7 +35,7 @@ export default function ProductPage({ params }: ProductPageProps) {
   }
 
   return (
-    <div>
+    <div className='pt-32'>
       <ProductDetail product={product} />
       <ProductReviews />
       <RelatedProducts />

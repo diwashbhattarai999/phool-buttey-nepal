@@ -1,31 +1,32 @@
-import { Metadata } from 'next'
-import { ProductGrid } from '@/components/products/products-grid'
-import { Suspense } from 'react'
+import { Metadata } from "next";
+import { ProductGrid } from "@/components/products/products-grid";
+import { Suspense } from "react";
 
 export const metadata: Metadata = {
-  title: 'Our Products | SHOP.CO',
-  description: 'Explore our wide range of stylish clothing and accessories. Find the perfect outfit that matches your unique style at SHOP.CO.',
+  title: "Our Products | SHOP.CO",
+  description:
+    "Explore our wide range of stylish clothing and accessories. Find the perfect outfit that matches your unique style at SHOP.CO.",
   openGraph: {
-    title: 'Our Products | SHOP.CO',
-    description: 'Explore our wide range of stylish clothing and accessories. Find the perfect outfit that matches your unique style.',
+    title: "Our Products | SHOP.CO",
+    description:
+      "Explore our wide range of stylish clothing and accessories. Find the perfect outfit that matches your unique style.",
     images: [
       {
-        url: '/images/products-banner.jpg',
+        url: "/images/products-banner.jpg",
         width: 1200,
         height: 630,
-        alt: 'SHOP.CO Products',
+        alt: "SHOP.CO Products",
       },
     ],
   },
-}
+};
 
 export default function ProductsPage() {
   return (
-    
-      <Suspense fallback={<div>Loading...</div>}>
+    <Suspense fallback={<div>Loading...</div>}>
+      <div className="pt-32">
         <ProductGrid />
-      </Suspense>
- 
-  )
+      </div>
+    </Suspense>
+  );
 }
-
